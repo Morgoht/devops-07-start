@@ -1,7 +1,6 @@
 const { getCurrentMonth } = require("../app");
 const { isAdmin } = require("../app");
 
-
 describe("app test - getCurrentMonth", () => {
     test("should return the current month", () => {
         let thisMonth = getCurrentMonth();
