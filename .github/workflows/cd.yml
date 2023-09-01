@@ -1,4 +1,4 @@
-name: Devop 07 CD
+name: DevOps 07 CD
 
 on:
   push:
@@ -13,11 +13,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.14
-          cache: 'npm'
       - run: npm ci
       - run: npm run build
-      - uses: w9jds/firebase-action/@master
+      - uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
         env:
-          FIREBASE_TOKEN: ${{ secret.FIREBASE_TOKEN }}
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
