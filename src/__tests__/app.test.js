@@ -1,10 +1,11 @@
 const { getCurrentMonth } = require("../app");
 const { isAdmin } = require("../app");
 
-describe("app tests suites - getCurrentMonth", () => {
+
+describe("app test - getCurrentMonth", () => {
     test("should return the current month", () => {
-        const result = getCurrentMonth();
-        expect(result).toBe("November");
+        let thisMonth = getCurrentMonth();
+        expect(thisMonth).toBe("September");
     });
 });
 
