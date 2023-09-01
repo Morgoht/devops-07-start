@@ -1,9 +1,7 @@
 name: Devop 07 CD
 
 on:
-  pull-request:
-    types:
-      -closed
+  push:
     branches: [main]
   workflow_dispatch:
 
